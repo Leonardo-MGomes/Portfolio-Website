@@ -1,0 +1,146 @@
+/* Main Stuff */
+html {
+    box-sizing: border-box;
+    font-family: Calibri, helvetia, sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    border-bottom: black solid 1px;
+    background-color: white;
+}
+
+body {
+    max-width: 1300px;
+    margin: auto;
+}
+
+footer {
+    bottom: 0;
+
+    border-top: black solid 1px;
+}
+
+.site-title {
+    padding: 5px;
+
+    text-decoration: none;
+    color: black;
+
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.site-title:hover {
+    background-color: lightgray;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 5px;
+    margin: 5px;
+
+    text-decoration: none;
+    color: black;
+}
+
+.button:hover {
+    background-color: #cccccc;
+    border-radius: 10px;
+}
+
+.main-content {
+    display: flex;
+}
+
+
+/* Sidebar */
+/** Mobile Sidebar **/
+/*** Sidebar gets styled by a @media at-rule below (responsive section) ***/
+
+#mobile-sidebar-icon {
+    display: none;
+
+    position: fixed;
+    right: 1em;
+    top: 4em;
+    font-size: 1.5em;
+
+    border-radius: 6px;
+
+    background-color: lightgray;
+}
+
+#mobile-sidebar-toggle {
+    display: none;
+}
+
+#mobile-sidebar-toggle:checked ~ .sidebar {
+    display: block;
+}
+
+/** Desktop Sidebar **/
+
+.sidebar menu {
+    position: sticky;
+    top: 4em;
+    max-width: 10em;
+
+    margin-right: 1em;
+    margin-left: 1em;
+    padding: 0;
+
+    text-align: center;
+
+}
+
+.sidebar menu * {
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+    margin: 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Responsive */
+
+/** Tablets or small Laptops **/
+@media(max-width: 800px) {
+    .sidebar {
+        display: none;
+
+        position: fixed;
+        right: 3.5em;
+        top: 6em;
+        background: lightgray;
+        min-width: 12em;
+
+        border-radius: 6px;
+        box-shadow: 5px 5px 5px gray;
+    }
+
+    #mobile-sidebar-icon {
+        display: block;
+    }
+}
+
+/** Mobile **/
+@media(max-width: 680px) {
+    header {
+        flex-flow: column nowrap;
+    }
+}
