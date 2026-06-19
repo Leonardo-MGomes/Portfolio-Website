@@ -3,6 +3,7 @@ html {
     box-sizing: border-box;
     font-family: Calibri, helvetia, sans-serif;
     scroll-behavior: smooth;
+    margin: 1em;
 }
 
 header {
@@ -73,7 +74,7 @@ footer {
 
     position: fixed;
     right: 1em;
-    top: 4em;
+    top: 5em;
     font-size: 1.5em;
 
     border-radius: 6px;
@@ -91,7 +92,7 @@ footer {
 
 /** Desktop Sidebar **/
 
-.sidebar menu {
+.sidebar {
     position: sticky;
     top: 4em;
     max-width: 10em;
@@ -102,6 +103,10 @@ footer {
 
     text-align: center;
 
+}
+
+.sidebar menu {
+    padding: 0;
 }
 
 .sidebar menu * {
@@ -118,14 +123,14 @@ footer {
 
 /* Responsive */
 
-/** Tablets or small Laptops **/
+/** Tablets or small Laptops (includes Mobile) **/
 @media(max-width: 800px) {
     .sidebar {
         display: none;
 
         position: fixed;
         right: 3.5em;
-        top: 6em;
+        top: 7.5em;
         background: lightgray;
         min-width: 12em;
 
@@ -136,10 +141,7 @@ footer {
     #mobile-sidebar-icon {
         display: block;
     }
-}
 
-/** Mobile **/
-@media(max-width: 680px) {
     header {
         flex-flow: column nowrap;
     }
