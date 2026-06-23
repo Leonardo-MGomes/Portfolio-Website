@@ -1,7 +1,7 @@
 /* Main Stuff */
 html {
     box-sizing: border-box;
-    font-family: Calibri, helvetia, sans-serif;
+    font-family: "Google Sans Flex", sans-serif;
     scroll-behavior: smooth;
     margin: 1em;
 }
@@ -148,5 +148,15 @@ footer {
 
     header {
         flex-flow: column nowrap;
+    }
+}
+
+/** When the Title breaks/wordwrap down **/
+@media(max-width: 426px) {
+    .sidebar {
+        top: 9.5em;
+    }
+    #mobile-sidebar-icon {
+        top: 7em;
     }
 }
