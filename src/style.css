@@ -35,6 +35,14 @@ footer {
     border-top: black solid 1px;
 }
 
+img {
+    width: 30%;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    height: auto;
+}
+
 .site-title {
     padding: 5px;
 
@@ -67,6 +75,11 @@ footer {
 .main-content {
     display: flex;
 }
+
+section {
+    width: 75%;
+}
+
 
 
 /* Sidebar */
